@@ -72,7 +72,7 @@ class C_calm_template extends Controller
                 })->toArray();
         }
 
-        return view('invitation.calm_template.V_calm_template', compact('menus', 'invitation', 'gift_types'));
+        return view('invitation.calm-template.V-calm-template', compact('menus', 'invitation', 'gift_types'));
     }
 
     public function action_wedding_couple(Request $request, string $uuid = null)
@@ -132,7 +132,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -160,7 +160,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -171,11 +171,11 @@ class C_calm_template extends Controller
         $section_parameter = '#event';
         try {
             $request->validate([
-                'event_type_1' => 'required|string|max:255',
-                'event_date_1' => 'required|string|max:255',
-                'location_1'   => 'required|string|max:255',
-                'address_1'    => 'required|string|max:255',
-                'map_url_1'    => 'required|url',
+                'event_type_1' => 'nullable|string|max:255',
+                'event_date_1' => 'nullable|string|max:255',
+                'location_1'   => 'nullable|string|max:255',
+                'address_1'    => 'nullable|string|max:255',
+                'map_url_1'    => 'nullable|url',
                 'event_type_2' => 'nullable|string|max:255',
                 'event_date_2' => 'nullable|string|max:255',
                 'location_2'   => 'nullable|string|max:255',
@@ -201,7 +201,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -227,7 +227,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -254,7 +254,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -285,7 +285,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -306,7 +306,7 @@ class C_calm_template extends Controller
                 // Store
                 $uploadedCount = M_gallery::where('invitation_id', $request->invitation_id)->count();
                 if ($uploadedCount >= 10) {
-                    return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid . $section_parameter)
+                    return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid . $section_parameter)
                         ->with('error' . $section_parameter, 'Kamu hanya bisa mengunggah maksimal 10 file.');
                 }
 
@@ -322,7 +322,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
@@ -359,7 +359,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -387,7 +387,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -430,7 +430,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
@@ -448,7 +448,7 @@ class C_calm_template extends Controller
                 $message = 'Data berhasil dihapus.';
             }
 
-            return redirect()->route('invitations.calm_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.calm-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();

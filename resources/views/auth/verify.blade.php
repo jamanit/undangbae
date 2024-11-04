@@ -1,4 +1,4 @@
-@extends('layouts.app_auth')
+@extends('layouts.app-auth')
 
 @push('title')
     Verify Your Email Address

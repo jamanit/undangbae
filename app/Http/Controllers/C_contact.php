@@ -30,7 +30,7 @@ class C_contact extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('contact.V_index_contact', compact('menus'));
+        return view('contact.V-index-contact', compact('menus'));
     }
 
     public function store(Request $request)
@@ -90,7 +90,7 @@ class C_contact extends Controller
 
         $contacts = M_contact::all();
 
-        return view('contact.V_show_contact_us', compact('menus', 'contacts'));
+        return view('contact.V-show-contact-us', compact('menus', 'contacts'));
     }
 
     public function destroy(M_contact $contact)

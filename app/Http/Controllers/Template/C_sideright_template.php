@@ -74,7 +74,7 @@ class C_sideright_template extends Controller
                 })->toArray();
         }
 
-        return view('invitation.sideright_template.V_sideright_template', compact('menus', 'invitation', 'gift_types'));
+        return view('invitation.sideright-template.V-sideright-template', compact('menus', 'invitation', 'gift_types'));
     }
 
     public function action_cover(Request $request, string $uuid = null)
@@ -108,7 +108,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -173,7 +173,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -238,7 +238,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -249,11 +249,11 @@ class C_sideright_template extends Controller
         $section_parameter = '#event';
         try {
             $request->validate([
-                'event_type_1' => 'required|string|max:255',
-                'event_date_1' => 'required|string|max:255',
-                'location_1'   => 'required|string|max:255',
-                'address_1'    => 'required|string|max:255',
-                'map_url_1'    => 'required|url',
+                'event_type_1' => 'nullable|string|max:255',
+                'event_date_1' => 'nullable|string|max:255',
+                'location_1'   => 'nullable|string|max:255',
+                'address_1'    => 'nullable|string|max:255',
+                'map_url_1'    => 'nullable|url',
                 'event_type_2' => 'nullable|string|max:255',
                 'event_date_2' => 'nullable|string|max:255',
                 'location_2'   => 'nullable|string|max:255',
@@ -279,7 +279,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -305,7 +305,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -332,7 +332,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -363,7 +363,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -384,7 +384,7 @@ class C_sideright_template extends Controller
                 // Store
                 $uploadedCount = M_gallery::where('invitation_id', $request->invitation_id)->count();
                 if ($uploadedCount >= 10) {
-                    return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid . $section_parameter)
+                    return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid . $section_parameter)
                         ->with('error' . $section_parameter, 'Kamu hanya bisa mengunggah maksimal 10 file.');
                 }
 
@@ -400,7 +400,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
@@ -437,7 +437,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -465,7 +465,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid .  $section_parameter)->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
         }
@@ -508,7 +508,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil ditambahkan.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();
@@ -526,7 +526,7 @@ class C_sideright_template extends Controller
                 $message = 'Data berhasil dihapus.';
             }
 
-            return redirect()->route('invitations.sideright_template.edit', $request->invitation_uuid . $section_parameter)
+            return redirect()->route('invitations.sideright-template.edit', $request->invitation_uuid . $section_parameter)
                 ->with('success' . $section_parameter, $message);
         } catch (ValidationException $e) {
             return redirect()->to(url()->previous() . $section_parameter)->with('error' . $section_parameter, 'Data gagal diproses, harap periksa kembali.')->withErrors($e->validator)->withInput();

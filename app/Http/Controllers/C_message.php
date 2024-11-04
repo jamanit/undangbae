@@ -30,7 +30,7 @@ class C_message extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('message.V_index_message', compact('menus'));
+        return view('message.V-index-message', compact('menus'));
     }
 
     public function store(Request $request)
@@ -58,7 +58,7 @@ class C_message extends Controller
 
         $menus = $this->menuService->getMenus($role_id);
 
-        return view('message.V_show_message', compact('menus', 'message'));
+        return view('message.V-show-message', compact('menus', 'message'));
     }
 
     public function edit(M_message $message)

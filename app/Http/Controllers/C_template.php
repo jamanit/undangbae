@@ -37,7 +37,7 @@ class C_template extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('template.V_index_template', compact('menus'));
+        return view('template.V-index-template', compact('menus'));
     }
 
     public function create()
@@ -56,7 +56,7 @@ class C_template extends Controller
             'No'  => 'No',
         ];
 
-        return view('template.V_create_template', compact('menus', 'template_type_list', 'publication_status_list'));
+        return view('template.V-create-template', compact('menus', 'template_type_list', 'publication_status_list'));
     }
 
     public function store(Request $request)
@@ -104,7 +104,7 @@ class C_template extends Controller
             'No'  => 'No',
         ];
 
-        return view('template.V_edit_template', compact('menus', 'template', 'template_type_list', 'publication_status_list'));
+        return view('template.V-edit-template', compact('menus', 'template', 'template_type_list', 'publication_status_list'));
     }
 
     public function update(Request $request, M_template $template)

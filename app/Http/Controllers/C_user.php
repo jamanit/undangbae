@@ -39,7 +39,7 @@ class C_user extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('user.V_index_user', compact('menus'));
+        return view('user.V-index-user', compact('menus'));
     }
 
     public function create()
@@ -58,7 +58,7 @@ class C_user extends Controller
             'inactive' => 'inactive',
         ];
 
-        return view('user.V_create_user', compact('menus', 'roles', 'status'));
+        return view('user.V-create-user', compact('menus', 'roles', 'status'));
     }
 
     public function store(Request $request)
@@ -102,7 +102,7 @@ class C_user extends Controller
             'inactive' => 'inactive',
         ];
 
-        return view('user.V_edit_user', compact('menus', 'user', 'roles', 'status'));
+        return view('user.V-edit-user', compact('menus', 'user', 'roles', 'status'));
     }
 
     public function update(Request $request, User $user)

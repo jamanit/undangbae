@@ -30,7 +30,7 @@ class C_service extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('service.V_index_service', compact('menus'));
+        return view('service.V-index-service', compact('menus'));
     }
 
     public function store(Request $request)

@@ -25,7 +25,7 @@ class C_setting extends Controller
 
         $menus = $this->menuService->getMenus($role_id);
 
-        return view('setting.V_edit_setting', compact('menus', 'setting'));
+        return view('setting.V-edit-setting', compact('menus', 'setting'));
     }
 
     public function update(Request $request, M_setting $setting)

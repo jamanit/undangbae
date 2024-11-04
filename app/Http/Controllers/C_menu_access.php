@@ -24,7 +24,7 @@ class C_menu_access extends Controller
         $role_list = M_menu_access::level($uuid);
         $menu_list = M_menu_access::menus();
 
-        return view('menu_access.V_show_menu_access', compact('menus', 'role_list', 'menu_list'));
+        return view('menu-access.V-show-menu-access', compact('menus', 'role_list', 'menu_list'));
     }
 
     public function store(Request $request)

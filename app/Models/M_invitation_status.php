@@ -10,7 +10,7 @@ class M_invitation_status extends Model
 {
     use HasFactory, GeneratesUuid;
 
-    protected $table = 'tb_invitation_status';
+    protected $table = 'tb_invitation_statuses';
 
     protected $guarded = [];
 

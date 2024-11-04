@@ -30,7 +30,7 @@ class C_discount extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('discount.V_index_discount', compact('menus'));
+        return view('discount.V-index-discount', compact('menus'));
     }
 
     public function store(Request $request)

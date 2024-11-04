@@ -23,6 +23,6 @@ class DashboardController extends Controller
         $menus = $this->menuService->getMenus($role_id);
         $templates = M_template::orderBy('id', 'desc')->get();
 
-        return view('dashboard.index_dashboard', compact('menus', 'templates'));
+        return view('dashboard.V-index-dashboard', compact('menus', 'templates'));
     }
 }

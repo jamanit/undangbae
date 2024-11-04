@@ -39,7 +39,7 @@ class paymentTransactionEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'email.V_payment_transaction_email',
+            view: 'email.V-payment-transaction-email',
             with: [
                 'transaction' => $this->transaction,
             ],

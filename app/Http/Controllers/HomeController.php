@@ -24,7 +24,7 @@ class HomeController extends Controller
         $templates = M_template::where('publication_status', 'Yes')->orderBy('id', 'desc')->limit(4)->get();
         $services  = M_service::orderBy('id', 'asc')->get();
 
-        return view('home.index_home', compact('templates', 'services'));
+        return view('home.V-index-home', compact('templates', 'services'));
     }
 
     public function send_contact_form(Request $request)

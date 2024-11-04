@@ -30,7 +30,7 @@ class C_invitation_status extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('invitation_status.V_index_invitation_status', compact('menus'));
+        return view('invitation-status.V-index-invitation-status', compact('menus'));
     }
 
     public function store(Request $request)
@@ -44,7 +44,7 @@ class C_invitation_status extends Controller
             $data = $request->all();
             M_invitation_status::create($data);
 
-            return redirect()->route('invitation_status.index')->with('success', 'Data added successfully.');
+            return redirect()->route('invitation-statuses.index')->with('success', 'Data added successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data added failed, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -69,7 +69,7 @@ class C_invitation_status extends Controller
             $data = $request->all();
             $invitation_status->update($data);
 
-            return redirect()->route('invitation_status.index')->with('success', 'Data updated successfully.');
+            return redirect()->route('invitation-statuses.index')->with('success', 'Data updated successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data failed to update, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -79,9 +79,9 @@ class C_invitation_status extends Controller
     {
         try {
             $invitation_status->delete();
-            return redirect()->route('invitation_status.index')->with('success', 'Data deleted successfully.');
+            return redirect()->route('invitation-statuses.index')->with('success', 'Data deleted successfully.');
         } catch (\Exception $e) {
-            return redirect()->route('invitation_status.index')->with('error', 'Data failed to delete.');
+            return redirect()->route('invitation-statuses.index')->with('error', 'Data failed to delete.');
         }
     }
 }

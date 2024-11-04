@@ -30,7 +30,7 @@ class C_payment_method extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('payment_method.V_index_payment_method', compact('menus'));
+        return view('payment-method.V-index-payment-method', compact('menus'));
     }
 
     public function store(Request $request)
@@ -45,7 +45,7 @@ class C_payment_method extends Controller
             $data = $request->all();
             M_payment_method::create($data);
 
-            return redirect()->route('payment_methods.index')->with('success', 'Data added successfully.');
+            return redirect()->route('payment-methods.index')->with('success', 'Data added successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data added failed, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -72,7 +72,7 @@ class C_payment_method extends Controller
             $data = $request->all();
             $payment_method->update($data);
 
-            return redirect()->route('payment_methods.index')->with('success', 'Data updated successfully.');
+            return redirect()->route('payment-methods.index')->with('success', 'Data updated successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data failed to update, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -82,9 +82,9 @@ class C_payment_method extends Controller
     {
         try {
             $payment_method->delete();
-            return redirect()->route('payment_methods.index')->with('success', 'Data deleted successfully.');
+            return redirect()->route('payment-methods.index')->with('success', 'Data deleted successfully.');
         } catch (\Exception $e) {
-            return redirect()->route('payment_methods.index')->with('error', 'Data failed to delete.');
+            return redirect()->route('payment-methods.index')->with('error', 'Data failed to delete.');
         }
     }
 }

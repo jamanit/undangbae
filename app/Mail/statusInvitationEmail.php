@@ -39,7 +39,7 @@ class statusInvitationEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'email.V_status_invitation_email',
+            view: 'email.V-status-invitation-email',
             with: [
                 'invitation' => $this->invitation,
             ],

@@ -30,6 +30,6 @@ class C_menu extends Controller
                 return [$item->id => $item->first_menu_name];
             })->toArray();
 
-        return view('menu.V_index_menu', compact('menus', 'menu_firsts', 'menu_seconds', 'menu_first_list'));
+        return view('menu.V-index-menu', compact('menus', 'menu_firsts', 'menu_seconds', 'menu_first_list'));
     }
 }

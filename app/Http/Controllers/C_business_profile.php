@@ -25,7 +25,7 @@ class C_business_profile extends Controller
 
         $menus = $this->menuService->getMenus($role_id);
 
-        return view('business_profile.V_edit_business_profile', compact('menus', 'business_profile'));
+        return view('business-profile.V-edit-business-profile', compact('menus', 'business_profile'));
     }
 
     public function update(Request $request, M_business_profile $business_profile)
@@ -56,7 +56,7 @@ class C_business_profile extends Controller
             }
             $business_profile->update($data);
 
-            return redirect()->route('business_profiles.edit', $business_profile->uuid)->with('success', 'Data updated successfully.');
+            return redirect()->route('business-profiles.edit', $business_profile->uuid)->with('success', 'Data updated successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data failed to update, please check again.')->withErrors($e->validator)->withInput();
         }

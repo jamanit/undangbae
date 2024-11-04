@@ -41,7 +41,7 @@ class C_invitation extends Controller
 
         $templates = M_template::where('publication_status', 'Yes')->orderBy('id', 'desc')->limit(4)->get();
 
-        return view('invitation.V_index_template', compact('menus', 'templates'));
+        return view('invitation.V-index-template', compact('menus', 'templates'));
     }
 
     public function load_more_template(Request $request)
@@ -104,7 +104,7 @@ class C_invitation extends Controller
                 'template_id' => $request->template_id,
                 'invitation_code' => date('ymd-Hi') . '-' . rand(00, 99),
                 'user_id' => $user_id,
-                'expired_date' => Carbon::now()->addMonths(6),
+                'expired_date' => Carbon::now()->addMonths(1),
                 'invitation_status_id' => 1,
             ];
 
@@ -128,7 +128,7 @@ class C_invitation extends Controller
             // Komit transaksi jika semua langkah berhasil
             DB::commit();
 
-            return redirect()->route('invitations.edit_transaction', $transaction->uuid);
+            return redirect()->route('invitations.edit-transaction', $transaction->uuid);
         } catch (ValidationException $e) {
             DB::rollBack();
             return redirect()->back()->with('error', 'Gagal menambahkan data, harap periksa kembali.')->withErrors($e->validator)->withInput();
@@ -149,7 +149,7 @@ class C_invitation extends Controller
         $payment_methods   = M_payment_method::orderBy('id', 'desc')->get();
         $invitation_status = M_invitation_status::whereNotIn('id', [1, 2])->orderBy('id', 'asc')->get();
 
-        return view('invitation.V_edit_transaction', compact('menus', 'transaction', 'payment_methods', 'invitation_status'));
+        return view('invitation.V-edit-transaction', compact('menus', 'transaction', 'payment_methods', 'invitation_status'));
     }
 
     public function update_transaction(Request $request, string $transaction_uuid)
@@ -197,7 +197,6 @@ class C_invitation extends Controller
             return redirect()->back()->with('error', 'Terjadi kesalahan, harap coba lagi.')->withInput();
         }
     }
-
 
     public function update_percent_discount(Request $request, string $transaction_uuid)
     {
@@ -265,7 +264,6 @@ class C_invitation extends Controller
         }
     }
 
-
     public function index(Request $request)
     {
         $user_id = Auth::user()->id;
@@ -273,7 +271,7 @@ class C_invitation extends Controller
 
         if ($request->ajax()) {
             $query = M_invitation::with('template.template_type', 'transaction', 'invitation_status')->select('*')->orderBy('id', 'desc');
-            if ($role_id === 4) {
+            if ($role_id == 4) {
                 $query->where('user_id', $user_id);
             }
             $invitations = $query->get();
@@ -297,12 +295,15 @@ class C_invitation extends Controller
                 ->addColumn('transaction_uuid', function ($invitation) {
                     return  $invitation->transaction->uuid ?? 'N/A';
                 })
+                ->addColumn('show_invitation_url', function ($invitation) {
+                    return $invitation->id . '/' . ($invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . '&' . $invitation->wedding_couple->groom_nickname : '');
+                })
                 ->make(true);
         } else {
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('invitation.V_index_invitation', compact('menus'));
+        return view('invitation.V-index-invitation', compact('menus'));
     }
 
     public function destroy(M_invitation $invitation)
@@ -344,6 +345,6 @@ class C_invitation extends Controller
             'messages',
         ])->where('id', $invitation_id)->first();
 
-        return view('invitation.' . $invitation->template->parameter . '.V_' . $invitation->template->template_code, compact('invitation', 'guest_name'));
+        return view('invitation.' . $invitation->template->parameter . '.V-' . $invitation->template->template_code, compact('invitation', 'guest_name'));
     }
 }

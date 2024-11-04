@@ -30,22 +30,22 @@ class C_contact_form extends Controller
             $menus = $this->menuService->getMenus($role_id);
         }
 
-        return view('contact_form.V_index_contact_form', compact('menus'));
+        return view('contact-form.V-index-contact-form', compact('menus'));
     }
 
     public function store(Request $request)
     {
         try {
             $request->validate([
-                'name'    => 'required|string|max:255',
-                'email'   => 'required|string|max:255',
+                'name'         => 'required|string|max:255',
+                'email'        => 'required|string|max:255',
                 'contact_form' => 'required|string',
             ]);
 
             $data = $request->all();
             M_contact_form::create($data);
 
-            return redirect()->route('contact_forms.index')->with('success', 'Data added successfully.');
+            return redirect()->route('contact-forms.index')->with('success', 'Data added successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data added failed, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -57,7 +57,7 @@ class C_contact_form extends Controller
 
         $menus = $this->menuService->getMenus($role_id);
 
-        return view('contact_form.V_show_contact_form', compact('menus', 'contact_form'));
+        return view('contact-form.V-show-contact-form', compact('menus', 'contact_form'));
     }
 
     public function edit(M_contact_form $contact_form)
@@ -74,15 +74,15 @@ class C_contact_form extends Controller
     {
         try {
             $request->validate([
-                'name'    => 'required|string|max:255',
-                'email'   => 'required|string|max:255',
+                'name'         => 'required|string|max:255',
+                'email'        => 'required|string|max:255',
                 'contact_form' => 'required|string',
             ]);
 
             $data = $request->all();
             $contact_form->update($data);
 
-            return redirect()->route('contact_forms.index')->with('success', 'Data updated successfully.');
+            return redirect()->route('contact-forms.index')->with('success', 'Data updated successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->with('error', 'Data failed to update, please check again.')->withErrors($e->validator)->withInput();
         }
@@ -92,9 +92,9 @@ class C_contact_form extends Controller
     {
         try {
             $contact_form->delete();
-            return redirect()->route('contact_forms.index')->with('success', 'Data deleted successfully.');
+            return redirect()->route('contact-forms.index')->with('success', 'Data deleted successfully.');
         } catch (\Exception $e) {
-            return redirect()->route('contact_forms.index')->with('error', 'Data failed to delete.');
+            return redirect()->route('contact-forms.index')->with('error', 'Data failed to delete.');
         }
     }
 }

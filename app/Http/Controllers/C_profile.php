@@ -25,7 +25,7 @@ class C_profile extends Controller
         $menus   = $this->menuService->getMenus($role_id);
         $profile = User::find($id);
 
-        return view('profile.V_index_profile', compact('menus', 'profile'));
+        return view('profile.V-index-profile', compact('menus', 'profile'));
     }
 
     public function update(Request $request, User $profile)
