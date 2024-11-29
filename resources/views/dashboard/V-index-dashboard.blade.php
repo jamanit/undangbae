@@ -17,7 +17,7 @@
             <div class="section-body">
                 @if (session('verified'))
                     <div class="alert alert-success" role="alert">
-                        {{ __('Your email has been successfully verified!') }}
+                        {{ __('Email Anda telah berhasil diverifikasi!') }}
                     </div>
                 @endif
 

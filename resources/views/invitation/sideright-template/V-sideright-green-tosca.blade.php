@@ -28,7 +28,7 @@
             <div class="relative z-10 flex h-full flex-col items-start justify-end pb-12 pl-8 text-primary-green-tosca-400">
                 <div data-aos="fade-right">
                     <p class="mb-4 text-lg sm:text-2xl lg:text-4xl">{{ $invitation->transaction->template->template_type->template_type_name ?? '' }}</p>
-                    <h2 class="mb-4 font-sacramento text-lg font-semibold sm:text-4xl lg:text-6xl">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanite & Pria' }}</h2>
+                    <h2 class="mb-4 font-sacramento text-lg font-semibold sm:text-4xl lg:text-6xl">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanita & Pria' }}</h2>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl">Tanggal Acara: {{ $formatted_nearest_date }}</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <div class="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-green-tosca-400">
                     <div data-aos="fade-down">
                         <p class="text-base">{{ $invitation->transaction->template->template_type->template_type_name ?? '' }}</p>
-                        <p class="mt-2 font-sacramento text-3xl font-semibold">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanite & Pria' }}</p>
+                        <p class="mt-2 font-sacramento text-3xl font-semibold">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanita & Pria' }}</p>
                     </div>
                     <div data-aos="fade-left">
                         <p class="mt-20 text-base">Kepada Yth,</p>
@@ -101,7 +101,7 @@
 
                         <div data-aos="fade-right">
                             <img src="{{ Storage::url($invitation->wedding_couple->bride_photo) }}" class="mx-auto h-[400px] w-2/3 rounded-b-[30%] rounded-t-[30%] border-4 border-primary-green-tosca-400 object-cover" />
-                            <p class="mt-4 font-sacramento text-4xl font-semibold">{{ $invitation->wedding_couple->bride_mother_name }}</p>
+                            <p class="mt-4 font-sacramento text-4xl font-semibold">{{ $invitation->wedding_couple->bride_nickname }}</p>
                             <p class="text-lg">{{ $invitation->wedding_couple->bride_full_name }}</p>
                             <p class="text-base text-gray-500">Putri ke {{ $invitation->wedding_couple->bride_child_number }} dari</p>
                             <p class="text-base text-gray-500">{{ $invitation->wedding_couple->bride_father_name . ' & ' . $invitation->wedding_couple->bride_mother_name }}</p>
@@ -111,7 +111,7 @@
                             <p class="my-8 font-sacramento text-4xl">&</p>
 
                             <img src="{{ Storage::url($invitation->wedding_couple->groom_photo) }}" class="mx-auto h-[400px] w-2/3 rounded-b-[30%] rounded-t-[30%] border-4 border-primary-green-tosca-400 object-cover" />
-                            <p class="mt-4 font-sacramento text-4xl font-semibold">{{ $invitation->wedding_couple->groom_mother_name }}</p>
+                            <p class="mt-4 font-sacramento text-4xl font-semibold">{{ $invitation->wedding_couple->groom_nickname }}</p>
                             <p class="text-lg">{{ $invitation->wedding_couple->groom_full_name }}</p>
                             <p class="text-base text-gray-500">Putri ke {{ $invitation->wedding_couple->groom_child_number }} dari</p>
                             <p class="text-base text-gray-500">{{ $invitation->wedding_couple->groom_father_name . ' & ' . $invitation->wedding_couple->groom_mother_name }}</p>
@@ -337,7 +337,7 @@
                                             <p class="base px-1 py-1 text-gray-500">{{ $item->recipient_phone_number }}</p>
                                             <p class="px-1 py-1 text-base">
                                                 <span class="text-base text-gray-500">{{ $item->recipient_address }}</span>
-                                                <i id="copy-icon" class="fa-regular fa-copy cursor-pointer text-2xl hover:text-primary-green-tosca-400" onclick="copyToClipboard('bg-primary-green-tosca-500', '{{ $item->recipient_name . ' / ' . $item->recipient_phone_number . ' / ' . $item->recipient_address }}')""></i>
+                                                <i id="copy-icon" class="fa-regular fa-copy cursor-pointer text-2xl hover:text-primary-green-tosca-400" onclick="copyToClipboard('bg-primary-green-tosca-500', '{{ $item->recipient_name . ' / ' . $item->recipient_phone_number . ' / ' . $item->recipient_address }}')"></i>
                                             </p>
                                         </div>
                                     </div>
@@ -423,7 +423,7 @@
                                 {!! nl2br(e($invitation->closing->closing_text)) !!}
                             </p>
                             <p class="mb-4 text-base font-semibold">{!! nl2br(e($invitation->closing->closing_greeting)) !!}</p>
-                            <p class="pb-32 font-sacramento text-3xl font-semibold">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanite & Pria' }}</p>
+                            <p class="pb-32 font-sacramento text-3xl font-semibold">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanita & Pria' }}</p>
                         </div>
                     </div>
                     <img src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/image/green-tosca/flower-5.png" class="absolute bottom-0 z-10 w-full object-cover" />

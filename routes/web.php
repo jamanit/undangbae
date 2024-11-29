@@ -137,5 +137,3 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 require __DIR__ . '/invitation.php';
-
-Route::get('/{invitation_id}/{wedding_couple?}/{guest_name?}', [App\Http\Controllers\C_invitation::class, 'show_invitation'])->name('invitations.show-invitation');

@@ -96,7 +96,7 @@
                 <div class="relative z-30 mx-4 my-4 flex h-screen flex-col items-center justify-center">
                     <div class="text-center" data-aos="fade-down">
                         <p class="mb-4 text-base text-white">{{ $invitation->transaction->template->template_type->template_type_name ?? '' }}</p>
-                        <p class="mb-16 font-sacramento text-4xl font-semibold text-pink-400">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanite & Pria' }}</p>
+                        <p class="mb-16 font-sacramento text-4xl font-semibold text-pink-400">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanita & Pria' }}</p>
                     </div>
 
                     @php
@@ -469,7 +469,7 @@
                         </p>
                         <div data-aos="fade-up">
                             <p class="mb-4 text-base font-semibold text-white">{!! nl2br(e($invitation->closing->closing_greeting)) !!}</p>
-                            <p class="pb-32 font-sacramento text-4xl font-semibold text-pink-400">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanite & Pria' }}</p>
+                            <p class="pb-32 font-sacramento text-4xl font-semibold text-pink-400">{{ $invitation->wedding_couple ? $invitation->wedding_couple->bride_nickname . ' & ' . $invitation->wedding_couple->groom_nickname : 'Wanita & Pria' }}</p>
                         </div>
                     @endif
                 </div>
