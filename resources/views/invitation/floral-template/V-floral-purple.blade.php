@@ -45,8 +45,11 @@
                 <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/21.png" class="z-10 absolute w-full inset-x-0 top-0" data-aos="fade-right" />
                 <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/22.png" class="z-20 absolute w-full inset-x-0 top-0" data-aos="fade-left" />
 
-                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/23.png" class="z-20 absolute w-full inset-x-0 bottom-0" data-aos="fade-right" />
-                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/24.png" class="z-10 absolute w-full inset-x-0 bottom-0" data-aos="fade-left" />
+                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/23.png" class="z-20 absolute w-full inset-x-0" data-aos="fade-right" />
+                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/24.png" class="z-10 absolute w-full inset-x-0" data-aos="fade-left" />
+
+                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/25.png" class="z-20 absolute w-full inset-x-0 bottom-0" data-aos="fade-up" />
+                <img src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/image/purple/26.png" class="z-10 absolute w-full inset-x-0 bottom-0" data-aos="fade-up" />
             </div>
 
             <div class="z-30 relative h-full w-full flex items-center justify-center flex-col">

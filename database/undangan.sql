@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 08:33 AM
+-- Generation Time: Nov 29, 2024 at 02:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -149,7 +149,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('YINhj2Mgij54wO9jAmvR7tUlFz3UFaJI5RjSHB1s', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUTFwM2htUTdleUNmV1pneTYzZkpJQU1zM2pSaVh2M0dHWW1weFFHYSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1732347196);
+('qdTo9bH6qKXuxi9AMisX97kCAWdMnAcwq20oOLHn', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiek9rbWU2eDloaWJBSzFvMUJUQm9nZXo3MnM4cDRoV0NrVzViR3ZoTyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6OTE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pbnZpdGF0aW9ucy9mbG9yYWwtdGVtcGxhdGUvZWRpdC9hMzAxODkyNy1mMGU1LTQ2Y2YtYmJlYy1kNjRjOTQ1YTRkMTkiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO30=', 1732878287);
 
 -- --------------------------------------------------------
 
@@ -737,12 +737,16 @@ CREATE TABLE `tb_templates` (
 --
 
 INSERT INTO `tb_templates` (`id`, `created_at`, `updated_at`, `uuid`, `image`, `example_url`, `template_code`, `template_name`, `price`, `percent_discount`, `parameter`, `template_type_id`, `publication_status`, `total_amount`) VALUES
-(1, '2024-10-22 05:50:57', '2024-11-22 11:14:59', '9e487f36-b2cf-4d0e-9f6b-4affa8c1b8aa', 'template/35DMbRL8Ep2yfCTynDRWeh002OEdHF9xW69ZQNpT.png', '/invitation-templates/jm-calm/dist/calm-pink.html', 'calm-pink', 'Calm Pink', '80000', '0', 'calm-template', 1, 'Yes', '80000'),
-(2, '2024-10-22 05:52:54', '2024-11-22 11:14:53', '9ab0ea3f-b7ce-4800-91d3-3835b84eb2e6', 'template/cE5UfulUiCVCzm39MfNqBhqFoVNEdz2SWUJlVEV9.png', '/invitation-templates/jm-calm/dist/calm-blue.html', 'calm-blue', 'Calm Blue', '80000', '0', 'calm-template', 1, 'Yes', '80000'),
-(3, '2024-10-22 05:53:36', '2024-11-22 11:14:46', 'e664fea4-15bf-45a7-b933-c93cffb8e5eb', 'template/Cer0ZL5iXdsXX2zT3MVTewgBc2yn4jhkeO6AJkMj.png', '/invitation-templates/jm-calm/dist/calm-green.html', 'calm-green', 'Calm Green', '80000', '0', 'calm-template', 1, 'Yes', '80000'),
-(4, '2024-10-22 05:55:23', '2024-11-22 11:14:39', 'cc472470-632b-4dea-ada2-79b0b96ea05a', 'template/UNn745n14svLVSEiofpBGzqFcuQZlgMqstCbqM7e.png', '/invitation-templates/jm-calm/dist/calm-red.html', 'calm-red', 'Calm Red', '80000', '0', 'calm-template', 1, 'Yes', '80000'),
-(5, '2024-10-22 05:56:26', '2024-11-22 11:14:33', 'e76f6fe5-6cb3-4f96-95b0-bfd5edf74f41', 'template/0ZOAnc3zx5dAGtDGu5rW4oaUmGg8Vq2zaD0kAAE6.png', '/invitation-templates/jm-sideright/dist/sideright-golden-brown.html', 'sideright-golden-brown', 'Sideright Golden Brown', '80000', '0', 'sideright-template', 1, 'Yes', '80000'),
-(10, '2024-11-18 08:57:41', '2024-11-22 11:14:07', 'e0c478cd-74f0-4ba1-9c81-51aa7be724b6', 'template/1JKmV5qKD4vjk7mYOyKAuuMW7uynv9h3wTD9xavY.png', '/invitation-templates/jm-sideright/dist/sideright-green-tosca.html', 'sideright-green-tosca', 'Sideright Green Tosca', '80000', '0', 'sideright-template', 1, 'Yes', '80000');
+(1, '2024-10-22 05:50:57', '2024-11-22 11:14:59', '9e487f36-b2cf-4d0e-9f6b-4affa8c1b8aa', 'template/35DMbRL8Ep2yfCTynDRWeh002OEdHF9xW69ZQNpT.png', '/invitation-templates/jm-calm/dist/calm-pink.html', 'calm-pink', 'Calm Pink', '80000', '0', 'calm-template', 1, 'Yes', '100000'),
+(2, '2024-10-22 05:52:54', '2024-11-22 11:14:53', '9ab0ea3f-b7ce-4800-91d3-3835b84eb2e6', 'template/cE5UfulUiCVCzm39MfNqBhqFoVNEdz2SWUJlVEV9.png', '/invitation-templates/jm-calm/dist/calm-blue.html', 'calm-blue', 'Calm Blue', '80000', '0', 'calm-template', 1, 'Yes', '100000'),
+(3, '2024-10-22 05:53:36', '2024-11-22 11:14:46', 'e664fea4-15bf-45a7-b933-c93cffb8e5eb', 'template/Cer0ZL5iXdsXX2zT3MVTewgBc2yn4jhkeO6AJkMj.png', '/invitation-templates/jm-calm/dist/calm-green.html', 'calm-green', 'Calm Green', '80000', '0', 'calm-template', 1, 'Yes', '100000'),
+(4, '2024-10-22 05:55:23', '2024-11-22 11:14:39', 'cc472470-632b-4dea-ada2-79b0b96ea05a', 'template/UNn745n14svLVSEiofpBGzqFcuQZlgMqstCbqM7e.png', '/invitation-templates/jm-calm/dist/calm-red.html', 'calm-red', 'Calm Red', '80000', '0', 'calm-template', 1, 'Yes', '100000'),
+(5, '2024-10-22 05:56:26', '2024-11-22 11:14:33', 'e76f6fe5-6cb3-4f96-95b0-bfd5edf74f41', 'template/0ZOAnc3zx5dAGtDGu5rW4oaUmGg8Vq2zaD0kAAE6.png', '/invitation-templates/jm-sideright/dist/sideright-golden-brown.html', 'sideright-golden-brown', 'Sideright Golden Brown', '80000', '0', 'sideright-template', 1, 'Yes', '100000'),
+(10, '2024-11-18 08:57:41', '2024-11-22 11:14:07', 'e0c478cd-74f0-4ba1-9c81-51aa7be724b6', 'template/1JKmV5qKD4vjk7mYOyKAuuMW7uynv9h3wTD9xavY.png', '/invitation-templates/jm-sideright/dist/sideright-green-tosca.html', 'sideright-green-tosca', 'Sideright Green Tosca', '80000', '0', 'sideright-template', 1, 'Yes', '100000'),
+(11, '2024-11-29 07:07:00', '2024-11-29 09:58:38', '61040937-c054-41d9-846b-279ab911f8b5', 'template/Kg3MSs8XTFstxv4YBmsC04EnbDhbWNmvPbMspIwm.png', '/invitation-templates/jm-floral/dist/floral-purple.html', 'floral-purple', 'Floral Purple', '80000', '0', 'floral-template', 1, 'Yes', '100000'),
+(12, '2024-11-29 07:08:00', '2024-11-29 09:58:28', 'f8c6d286-8bc0-4adc-8bf8-4cb2d2afe11f', 'template/Ivavcswp6EIJAHXUx2NzELESVC8aYqozAdjHvyp9.png', '/invitation-templates/jm-floral/dist/floral-brown.html', 'floral-brown', 'Floral Brown', '80000', '0', 'floral-template', 1, 'Yes', '100000'),
+(13, '2024-11-29 07:08:53', '2024-11-29 09:58:20', 'e0864b09-ee0a-4baf-b760-7d630029118e', 'template/vsZxQjzsKNlpKoRjsXAZUp7z4yO94MLCMQcP72vC.png', '/invitation-templates/jm-floral/dist/floral-golden-brown.html', 'floral-golden-brown', 'Floral Golden Brown', '80000', '0', 'floral-template', 1, 'Yes', '100000'),
+(14, '2024-11-29 07:09:41', '2024-11-29 09:58:13', 'cd4346ec-581f-4495-9dd1-e8a74318a9e1', 'template/Nazl432kYCHAepsx3kbR5ty2SASqahu1DmsmCZmb.png', '/invitation-templates/jm-floral/dist/floral-green-cream.html', 'floral-green-cream', 'Floral Green Cream', '80000', '0', 'floral-template', 1, 'Yes', '100000');
 
 -- --------------------------------------------------------
 
@@ -1232,7 +1236,7 @@ ALTER TABLE `tb_affiliate_withdrawals`
 -- AUTO_INCREMENT for table `tb_audios`
 --
 ALTER TABLE `tb_audios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_business_profiles`
@@ -1244,7 +1248,7 @@ ALTER TABLE `tb_business_profiles`
 -- AUTO_INCREMENT for table `tb_closings`
 --
 ALTER TABLE `tb_closings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_contacts`
@@ -1268,13 +1272,13 @@ ALTER TABLE `tb_covers`
 -- AUTO_INCREMENT for table `tb_events`
 --
 ALTER TABLE `tb_events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_galleries`
 --
 ALTER TABLE `tb_galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tb_gifts`
@@ -1292,19 +1296,19 @@ ALTER TABLE `tb_gift_types`
 -- AUTO_INCREMENT for table `tb_guests`
 --
 ALTER TABLE `tb_guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_invitations`
 --
 ALTER TABLE `tb_invitations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `tb_love_stories`
 --
 ALTER TABLE `tb_love_stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_menu_accesses`
@@ -1328,7 +1332,7 @@ ALTER TABLE `tb_menu_seconds`
 -- AUTO_INCREMENT for table `tb_messages`
 --
 ALTER TABLE `tb_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_payment_methods`
@@ -1340,7 +1344,7 @@ ALTER TABLE `tb_payment_methods`
 -- AUTO_INCREMENT for table `tb_quotes`
 --
 ALTER TABLE `tb_quotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_roles`
@@ -1370,7 +1374,7 @@ ALTER TABLE `tb_streamings`
 -- AUTO_INCREMENT for table `tb_templates`
 --
 ALTER TABLE `tb_templates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_template_types`
@@ -1382,13 +1386,13 @@ ALTER TABLE `tb_template_types`
 -- AUTO_INCREMENT for table `tb_transactions`
 --
 ALTER TABLE `tb_transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `tb_transaction_statuses`
 --
 ALTER TABLE `tb_transaction_statuses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_vouchers`
@@ -1400,7 +1404,7 @@ ALTER TABLE `tb_vouchers`
 -- AUTO_INCREMENT for table `tb_wedding_couples`
 --
 ALTER TABLE `tb_wedding_couples`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
