@@ -211,7 +211,7 @@
                     @endif
 
                     @if ($invitation->event && !empty(trim($invitation->event->event_date_2)))
-                        <div class="mb-4 w-full rounded-lg border-2 border-primary-green-cream-400 bg-white/75 p-4 text-center text-gray-600 shadow-lg" data-aos="fade-right">
+                        <div class="mb-4 w-full rounded-lg border-2 border-primary-green-cream-400 bg-white/75 p-4 text-center text-gray-600 shadow-lg" data-aos="fade-left">
                             <p class="mb-2 font-sacramento text-4xl font-semibold text-primary-green-cream-400">{{ $invitation->event->event_type_2 }}</p>
                             <p class="text-lg font-semibold">{{ \Carbon\Carbon::parse($invitation->event->event_date_2)->translatedFormat('l, d F Y') }}</p>
                             <p class="text-lg font-semibold">{{ \Carbon\Carbon::parse($invitation->event->event_date_2)->translatedFormat('H:i') }} WIB</p>
