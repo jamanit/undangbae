@@ -20,7 +20,7 @@
     <link href="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/fancyapps/ui/dist/fancybox/fancybox.css" rel="stylesheet" />
     <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <link href="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/tailwind-output.css" rel="stylesheet" />
-    <link href="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/costume-style.css" rel="stylesheet" />
+    <link href="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/custom-style.css" rel="stylesheet" />
 </head>
 
 <body class="font-worksans">
@@ -30,7 +30,7 @@
     <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/aos/dist/aos.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/costume-script.js"></script>
+    <script src="{{ asset('/') }}invitation-templates/jm-sideright/dist/assets/custom-script.js"></script>
 
     <script>
         // Fungsi send message

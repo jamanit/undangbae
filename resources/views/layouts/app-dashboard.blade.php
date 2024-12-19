@@ -52,8 +52,8 @@
     <script src="{{ asset('/') }}assets/moment/moment.js"></script>
     <script src="{{ asset('/') }}assets/moment-countdown/dist/moment-countdown.min.js"></script>
 
+    <link rel="stylesheet" href="{{ asset('/') }}assets/css/app-custom.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
     @stack('styles')
 </head>
 
@@ -104,7 +104,9 @@
     <!-- Other -->
     <script src="{{ asset('/') }}assets/aos/dist/aos.js"></script>
     <script src="{{ asset('/') }}assets/fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+    <script src="{{ asset('/') }}assets/ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
 
+    <script src="{{ asset('/') }}assets/js/app-custom.js"></script>
     @stack('scripts')
 </body>
 

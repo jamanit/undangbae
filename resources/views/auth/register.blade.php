@@ -20,7 +20,7 @@
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="row">
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-md-6">
                                         <label for="full_name">Nama Lengkap</label>
                                         <input type="text" name="full_name" id="full_name" value="{{ old('full_name') }}" placeholder="Masukkan Nama Lengkap" class="form-control @error('full_name') is-invalid @enderror">
                                         @error('full_name')
@@ -29,7 +29,7 @@
                                             </span>
                                         @enderror
                                     </div>
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-md-6">
                                         <label for="nick_name">Nama panggilan</label>
                                         <input type="text" id="nick_name" name="nick_name" value="{{ old('nick_name') }}" placeholder="Masukkan Nama panggilan" class="form-control @error('nick_name') is-invalid @enderror" autofocus>
                                         @error('nick_name')
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-md-6">
                                         <label for="password" class="d-block">Password</label>
                                         <input type="password" name="password" id="password" placeholder="Masukkan Pasword" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" autocomplete="new-password">
                                         @error('password')
@@ -64,7 +64,7 @@
                                             <div class="label"></div>
                                         </div>
                                     </div>
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-md-6">
                                         <label for="password-confirm" class="d-block">Konfirmasi Password</label>
                                         <input type="password" name="password_confirmation" id="password-confirm" placeholder="Konfirmasi Password" class="form-control @error('password_confirmation') is-invalid @enderror" autocomplete="new-password">
                                         @error('password_confirmation')

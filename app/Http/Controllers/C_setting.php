@@ -34,7 +34,7 @@ class C_setting extends Controller
             $request->validate([
                 'auth_background'  => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
                 'home_cover_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
-                'home_cover_text'  => 'required|string|max:255',
+                'home_cover_text'  => 'required|string',
             ]);
 
             $data = $request->all();

@@ -41,8 +41,8 @@
     </script>
 
     <!-- Other -->
+    <link rel="stylesheet" href="{{ asset('/') }}assets/css/app-custom.css">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
     @stack('styles')
 </head>
 
@@ -82,6 +82,8 @@
     <script src="{{ asset('/') }}assets/stisla/dist/assets/js/scripts.js"></script>
     <script src="{{ asset('/') }}assets/stisla/dist/assets/js/custom.js"></script>
 
+    <!-- Other -->
+    <script src="{{ asset('/') }}assets/js/app-custom.js"></script>
     @stack('scripts')
 </body>
 

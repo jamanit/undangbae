@@ -29,11 +29,10 @@
     <link href="{{ asset('/') }}assets/jm-homepage2/dist/assets/fancyapps/ui/dist/fancybox/fancybox.css" rel="stylesheet" />
     <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <link href="{{ asset('/') }}assets/jm-homepage2/dist/assets/tailwind-output.css" rel="stylesheet" />
-    <link href="{{ asset('/') }}assets/jm-homepage2/dist/assets/costume-style.css" rel="stylesheet" />
+    <link href="{{ asset('/') }}assets/jm-homepage2/dist/assets/custom-style.css" rel="stylesheet" />
 
-    <!-- Scripts -->
+    <!-- Other -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
     @stack('styles')
 </head>
 
@@ -54,8 +53,9 @@
     <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/aos/dist/aos.js"></script>
     <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/costume-script.js"></script>
+    <script src="{{ asset('/') }}assets/jm-homepage2/dist/assets/custom-script.js"></script>
 
+    <!-- Other -->
     @stack('scripts')
 </body>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2024 at 02:32 PM
+-- Generation Time: Dec 19, 2024 at 12:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -149,7 +149,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('qdTo9bH6qKXuxi9AMisX97kCAWdMnAcwq20oOLHn', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiek9rbWU2eDloaWJBSzFvMUJUQm9nZXo3MnM4cDRoV0NrVzViR3ZoTyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6OTE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pbnZpdGF0aW9ucy9mbG9yYWwtdGVtcGxhdGUvZWRpdC9hMzAxODkyNy1mMGU1LTQ2Y2YtYmJlYy1kNjRjOTQ1YTRkMTkiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTozO30=', 1732878287);
+('L0RjAAf0uAWb1zdRojF4g59BiKvkQN3d1USg2aON', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTNia09CNnlJemlsdndSZFNIWnhCUm9JRDhWcGtiUGoyZ0dReGtWRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fX0=', 1733930142),
+('pPbUeBSxdxGUyqsiRTEe40jq6Cj4GYXO7NFXDB1z', 6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia2FES3U2SVhWT1BVYXRaNExOVk4zZDE3SWdPc3pUN00yeFVUV05sVCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo2O30=', 1733243056);
 
 -- --------------------------------------------------------
 
@@ -217,7 +218,7 @@ CREATE TABLE `tb_business_profiles` (
 --
 
 INSERT INTO `tb_business_profiles` (`id`, `created_at`, `updated_at`, `uuid`, `logo`, `business_name`, `address`, `owner_name`, `about`, `google_maps`, `brand_name`, `brand_founding_date`, `brand_email`, `brand_website`) VALUES
-(1, '2024-10-18 16:19:50', '2024-11-03 16:14:24', 'uuid1234', 'image/qxv41L5jDOP9YrBfFcPqwg6fDGA1bEIelJiLtz1r.png', 'Jaman IT', 'Simp. Rimbo Kota Jambi', 'Riki Davidtra', '<p><strong>UndangBae</strong> adalah platform undangan digital yang didirikan oleh Jaman IT pada 23 Oktober 2024. Kami hadir untuk membawa inovasi dalam cara orang merayakan momen spesial mereka. Dengan latar belakang di bidang teknologi dan desain, kami memahami pentingnya memberikan pengalaman yang mulus dan menyenangkan bagi pengguna. Visi kami adalah untuk menciptakan solusi undangan yang praktis, estetis, dan ramah lingkungan. Kami percaya bahwa setiap momen berharga, baik itu pernikahan, ulang tahun, atau acara khusus lainnya, pantas dirayakan dengan cara yang unik dan berarti. Dengan berbagai fitur canggih yang kami tawarkan, termasuk desain kustom, interaktivitas, dan kemudahan pengiriman, kami berkomitmen untuk memberikan pengalaman yang tidak hanya modern tetapi juga sesuai dengan kebutuhan zaman. Kami di Jamundangan percaya bahwa teknologi dapat membantu menyatukan orang-orang, dan kami bersemangat untuk menjadi bagian dari perjalanan spesial Anda.</p>', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.439948837537!2d103.5518596658181!3d-1.621851021281201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1730092779448!5m2!1sid!2sid\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'UndangBae', '2024-10-23', 'undangan.jamanit@gmail.com', 'http://undangbae.site');
+(1, '2024-10-18 16:19:50', '2024-11-03 16:14:24', 'uuid1234', 'image/qxv41L5jDOP9YrBfFcPqwg6fDGA1bEIelJiLtz1r.png', 'Jaman IT', 'Simp. Rimbo Kota Jambi', 'Riki Davidtra', '<p><strong>UndangBae</strong> adalah platform undangan digital yang didirikan oleh Jaman IT pada 23 Oktober 2024. Kami hadir untuk membawa inovasi dalam cara orang merayakan momen spesial mereka. Dengan latar belakang di bidang teknologi dan desain, kami memahami pentingnya memberikan pengalaman yang mulus dan menyenangkan bagi pengguna. Visi kami adalah untuk menciptakan solusi undangan yang praktis, estetis, dan ramah lingkungan. Kami percaya bahwa setiap momen berharga, baik itu pernikahan, ulang tahun, atau acara khusus lainnya, pantas dirayakan dengan cara yang unik dan berarti. Dengan berbagai fitur canggih yang kami tawarkan, termasuk desain kustom, interaktivitas, dan kemudahan pengiriman, kami berkomitmen untuk memberikan pengalaman yang tidak hanya modern tetapi juga sesuai dengan kebutuhan zaman. Kami di Jamundangan percaya bahwa teknologi dapat membantu menyatukan orang-orang, dan kami bersemangat untuk menjadi bagian dari perjalanan spesial Anda.</p>', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.439948837537!2d103.5518596658181!3d-1.621851021281201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1730092779448!5m2!1sid!2sid\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 'UndangBae', '2024-10-23', 'undangan.jaman@gmail.com', 'http://undangbae.site');
 
 -- --------------------------------------------------------
 
@@ -692,7 +693,7 @@ CREATE TABLE `tb_settings` (
 --
 
 INSERT INTO `tb_settings` (`id`, `created_at`, `updated_at`, `uuid`, `auth_background`, `home_cover_image`, `home_cover_text`) VALUES
-(1, '2024-10-19 11:59:45', '2024-10-29 07:42:45', 'uuid1234', 'image/HQwNnNeSaSLaXayYfqU2trQSRQNOiZrUxGa5mDpg.png', 'image/spm7SpJ3Jd5c78QFyIqfMtV5lr3pzsZER19WVTHc.svg', '<p>&nbsp;\"Selamat datang di dunia undangan digital kami!</p><p>Bergabunglah dengan kami untuk merayakan momen-momen berharga dengan cara yang lebih modern dan mudah.\"</p>');
+(1, '2024-10-19 11:59:45', '2024-10-29 07:42:45', 'uuid1234', 'image/HQwNnNeSaSLaXayYfqU2trQSRQNOiZrUxGa5mDpg.png', 'image/spm7SpJ3Jd5c78QFyIqfMtV5lr3pzsZER19WVTHc.svg', '<p>&nbsp;\"Selamat datang di dunia undangan digital & cetak kami!</p><p>Bergabunglah dengan kami untuk merayakan momen-momen berharga dengan cara yang lebih modern dan mudah.</p><p>&nbsp;</p><p>Anda dapat membuat undangan sesuai pilihan desain kami dengan klik <a href=\"https://undangbae.site/register\"><strong>Daftar</strong></a>, atau biarkan Admin kami yang membuatkan undangan untuk Anda dengan menghubungi <a href=\"#contact\"><strong>Kontak</strong></a>.\"</p>');
 
 -- --------------------------------------------------------
 
@@ -903,7 +904,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `uuid`, `full_name`, `nick_name`, `role_id`) VALUES
-(1, NULL, 'rikidavidtra.2310@gmail.com', '2024-11-01 09:15:11', '$2y$12$k83DHsQnWCT3Guu8aDaV9uDCYhQ0Pt2P/jXGB/SvqpW4cQ5dysHUq', 'mYOJHE0uZn8V6vAfhFIKJBrB5ncPIRcmDl2F8AuUCLqcpABZFA0SQuL0kOYZ', '2024-09-22 04:51:41', '2024-10-30 02:44:20', 'b78bbf63-2424-4aec-9da7-55537062f5e3', 'Riki David', 'Riki', 1),
+(1, NULL, 'rikidavidtra.2310@gmail.com', '2024-11-01 09:15:11', '$2y$12$k83DHsQnWCT3Guu8aDaV9uDCYhQ0Pt2P/jXGB/SvqpW4cQ5dysHUq', 'VZL4GuROzQ9K0gqFSQM7LpiHpyvlZwSmYtbZNZKKHTOrb8sNzLucVb5ZXrcR', '2024-09-22 04:51:41', '2024-10-30 02:44:20', 'b78bbf63-2424-4aec-9da7-55537062f5e3', 'Riki David', 'Riki', 1),
 (3, NULL, 'admin@gmail.com', '2024-11-01 09:15:11', '$2y$12$Hj.o3dni.mofGL3kc5gCZOEyjqlY5.CsL0GXQLxR9Cp5gOWeG.VN6', NULL, '2024-10-23 03:28:12', '2024-10-30 02:43:51', '96b87508-e1d9-4630-8349-db88909a8de7', 'Riki David', 'Riki', 3),
 (4, NULL, 'user@gmail.com', '2024-11-01 09:15:11', '$2y$12$v.ylbvOGE9ydoqJiTk.iAubF97U.UQG3hPxmhS1Gs6VLJtD0J.yeq', NULL, '2024-10-29 09:18:58', '2024-10-30 02:43:25', '9113733a-efb6-4912-a04f-f63db698076c', 'Riki David', 'Riki', 4),
 (5, NULL, 'affiliate@gmail.com', '2024-11-01 09:15:11', '$2y$12$QtQhVAmkaR35hfJuSnJtxeHuNAHgYCW3V3HP8kwsKl6u2GMCmnCo6', NULL, '2024-11-22 07:34:16', '2024-11-22 07:34:16', 'f39a259d-e6ff-40d0-a77d-6774e6a1775c', 'Riki David', 'Riki', 5);
@@ -1410,7 +1411,7 @@ ALTER TABLE `tb_wedding_couples`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

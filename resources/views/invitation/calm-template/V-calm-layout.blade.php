@@ -22,7 +22,7 @@
     <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/moment/moment.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/moment-countdown/dist/moment-countdown.min.js"></script>
     <link href="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/tailwind-output.css" rel="stylesheet" />
-    <link href="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/costume-style.css" rel="stylesheet" />
+    <link href="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/custom-style.css" rel="stylesheet" />
 </head>
 
 <body class="flex h-screen w-full items-center justify-center font-worksans @stack('body-classes')">
@@ -32,7 +32,7 @@
     <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/aos/dist/aos.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/costume-script.js"></script>
+    <script src="{{ asset('/') }}invitation-templates/jm-calm/dist/assets/custom-script.js"></script>
 
     <script>
         // Fungsi send message

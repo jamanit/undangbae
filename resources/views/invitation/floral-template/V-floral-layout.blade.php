@@ -22,7 +22,7 @@
     <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/moment/moment.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/moment-countdown/dist/moment-countdown.min.js"></script>
     <link href="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/tailwind-output.css" rel="stylesheet" />
-    <link href="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/costume-style.css" rel="stylesheet" />
+    <link href="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/custom-style.css" rel="stylesheet" />
 </head>
 
 <body class="font-worksans flex items-center justify-end @stack('body-classes')">
@@ -32,7 +32,7 @@
     <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/aos/dist/aos.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/costume-script.js"></script>
+    <script src="{{ asset('/') }}invitation-templates/jm-floral/dist/assets/custom-script.js"></script>
 
     <script>
         // Fungsi send message
